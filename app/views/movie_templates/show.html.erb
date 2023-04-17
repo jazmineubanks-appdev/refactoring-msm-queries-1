@@ -1,6 +1,3 @@
-<h1>
-  Movie #<%= @the_movie.id %> details
-</h1>
 
 <a href="/movies">
   Go back
@@ -48,13 +45,8 @@
     Director
   </dt>
   <dd>
-    <% dir_id = @the_movie.director_id %>
-    
-    <% matching_directors = Director.where({ :id => dir_id }) %>
-    
-    <% the_director = matching_directors.at(0) %>
+    <%= @the_movie.director.name %>
 
-    <%= the_director.name %>
   </dd>
 
   <dt>
